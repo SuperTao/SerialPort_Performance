@@ -1,0 +1,12 @@
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\bin\Release\SerialPortW.exe.manifest
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\bin\Release\SerialPortW.application
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\bin\Release\SerialPortW.exe
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\bin\Release\SerialPortW.pdb
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPort.csprojResolveAssemblyReference.cache
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.SerialPortW.resources
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.Properties.Resources.resources
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPort.csproj.GenerateResource.Cache
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.exe.manifest
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.application
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.exe
+C:\Users\Tony\Desktop\SerialPortW-master\SerialPortW\obj\Release\SerialPortW.pdb
