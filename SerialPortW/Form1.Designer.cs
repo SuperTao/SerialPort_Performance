@@ -29,31 +29,32 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.serialPorts = new System.Windows.Forms.ComboBox();
-            this.send = new System.Windows.Forms.Button();
-            this.receive = new System.Windows.Forms.TextBox();
+            this.comboBoxSerialPorts = new System.Windows.Forms.ComboBox();
+            this.buttonSend = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.baudRate = new System.Windows.Forms.ComboBox();
+            this.comboBoxBaudRate = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.parity = new System.Windows.Forms.ComboBox();
+            this.comboBoxParity = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.stop = new System.Windows.Forms.ComboBox();
-            this.start = new System.Windows.Forms.Button();
-            this.dataBits = new System.Windows.Forms.ComboBox();
+            this.comboBoxStop = new System.Windows.Forms.ComboBox();
+            this.buttonOpen = new System.Windows.Forms.Button();
+            this.comboBoxDataBits = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.repeatTime_textBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.repeat_checkBox = new System.Windows.Forms.CheckBox();
-            this.match_num = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.mismatch_num = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cleanText = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.regexbox = new System.Windows.Forms.TextBox();
-            this.sendText = new System.Windows.Forms.TextBox();
+            this.label_ms = new System.Windows.Forms.Label();
+            this.textBoxTimer = new System.Windows.Forms.TextBox();
+            this.checkBoxRepeat = new System.Windows.Forms.CheckBox();
+            this.checkBox_newline = new System.Windows.Forms.CheckBox();
+            this.buttonClean = new System.Windows.Forms.Button();
+            this.TextBoxSend = new System.Windows.Forms.TextBox();
+            this.richTextBoxReceive = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.labelMatch = new System.Windows.Forms.Label();
+            this.labelMatchNum = new System.Windows.Forms.Label();
+            this.labelMismatch = new System.Windows.Forms.Label();
+            this.labelMismatchNum = new System.Windows.Forms.Label();
+            this.labelMatchString = new System.Windows.Forms.Label();
+            this.TextBoxMatchString = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -61,60 +62,47 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 35);
+            this.label1.Location = new System.Drawing.Point(17, 59);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Serial Port:";
             // 
-            // serialPorts
+            // comboBoxSerialPorts
             // 
-            this.serialPorts.FormattingEnabled = true;
-            this.serialPorts.Location = new System.Drawing.Point(136, 31);
-            this.serialPorts.Margin = new System.Windows.Forms.Padding(4);
-            this.serialPorts.Name = "serialPorts";
-            this.serialPorts.Size = new System.Drawing.Size(124, 26);
-            this.serialPorts.TabIndex = 1;
+            this.comboBoxSerialPorts.FormattingEnabled = true;
+            this.comboBoxSerialPorts.Location = new System.Drawing.Point(140, 53);
+            this.comboBoxSerialPorts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxSerialPorts.Name = "comboBoxSerialPorts";
+            this.comboBoxSerialPorts.Size = new System.Drawing.Size(124, 26);
+            this.comboBoxSerialPorts.TabIndex = 1;
             // 
-            // send
+            // buttonSend
             // 
-            this.send.Location = new System.Drawing.Point(22, 69);
-            this.send.Margin = new System.Windows.Forms.Padding(4);
-            this.send.Name = "send";
-            this.send.Size = new System.Drawing.Size(117, 62);
-            this.send.TabIndex = 2;
-            this.send.Text = "Send";
-            this.send.UseVisualStyleBackColor = true;
-            this.send.Click += new System.EventHandler(this.send_Click);
-            // 
-            // receive
-            // 
-            this.receive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.receive.Location = new System.Drawing.Point(283, -1);
-            this.receive.Margin = new System.Windows.Forms.Padding(4);
-            this.receive.Multiline = true;
-            this.receive.Name = "receive";
-            this.receive.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.receive.Size = new System.Drawing.Size(677, 505);
-            this.receive.TabIndex = 3;
+            this.buttonSend.Location = new System.Drawing.Point(5, 68);
+            this.buttonSend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(111, 45);
+            this.buttonSend.TabIndex = 2;
+            this.buttonSend.Text = "Send";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 100);
+            this.label2.Location = new System.Drawing.Point(35, 95);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 18);
             this.label2.TabIndex = 4;
             this.label2.Text = "Baud Rate:";
             // 
-            // baudRate
+            // comboBoxBaudRate
             // 
-            this.baudRate.FormattingEnabled = true;
-            this.baudRate.Items.AddRange(new object[] {
+            this.comboBoxBaudRate.FormattingEnabled = true;
+            this.comboBoxBaudRate.Items.AddRange(new object[] {
             "50",
             "75",
             "110",
@@ -145,85 +133,86 @@
             "3000000",
             "3500000",
             "4000000"});
-            this.baudRate.Location = new System.Drawing.Point(136, 97);
-            this.baudRate.Margin = new System.Windows.Forms.Padding(4);
-            this.baudRate.Name = "baudRate";
-            this.baudRate.Size = new System.Drawing.Size(124, 26);
-            this.baudRate.TabIndex = 5;
+            this.comboBoxBaudRate.Location = new System.Drawing.Point(140, 90);
+            this.comboBoxBaudRate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxBaudRate.Name = "comboBoxBaudRate";
+            this.comboBoxBaudRate.Size = new System.Drawing.Size(124, 26);
+            this.comboBoxBaudRate.TabIndex = 5;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 225);
+            this.label3.Location = new System.Drawing.Point(59, 172);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Parity:";
             // 
-            // parity
+            // comboBoxParity
             // 
-            this.parity.FormattingEnabled = true;
-            this.parity.Items.AddRange(new object[] {
+            this.comboBoxParity.FormattingEnabled = true;
+            this.comboBoxParity.Items.AddRange(new object[] {
             "NONE",
             "ODD",
             "EVEN"});
-            this.parity.Location = new System.Drawing.Point(136, 222);
-            this.parity.Margin = new System.Windows.Forms.Padding(4);
-            this.parity.Name = "parity";
-            this.parity.Size = new System.Drawing.Size(124, 26);
-            this.parity.TabIndex = 7;
+            this.comboBoxParity.Location = new System.Drawing.Point(140, 167);
+            this.comboBoxParity.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxParity.Name = "comboBoxParity";
+            this.comboBoxParity.Size = new System.Drawing.Size(124, 26);
+            this.comboBoxParity.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(13, 293);
+            this.label4.Location = new System.Drawing.Point(35, 209);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 18);
             this.label4.TabIndex = 8;
             this.label4.Text = "Stop Bits:";
             // 
-            // stop
+            // comboBoxStop
             // 
-            this.stop.FormattingEnabled = true;
-            this.stop.Items.AddRange(new object[] {
+            this.comboBoxStop.FormattingEnabled = true;
+            this.comboBoxStop.Items.AddRange(new object[] {
             "1",
+            "1.5",
             "2"});
-            this.stop.Location = new System.Drawing.Point(136, 290);
-            this.stop.Margin = new System.Windows.Forms.Padding(4);
-            this.stop.Name = "stop";
-            this.stop.Size = new System.Drawing.Size(124, 26);
-            this.stop.TabIndex = 7;
+            this.comboBoxStop.Location = new System.Drawing.Point(140, 204);
+            this.comboBoxStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxStop.Name = "comboBoxStop";
+            this.comboBoxStop.Size = new System.Drawing.Size(124, 26);
+            this.comboBoxStop.TabIndex = 7;
             // 
-            // start
+            // buttonOpen
             // 
-            this.start.Location = new System.Drawing.Point(12, 580);
-            this.start.Margin = new System.Windows.Forms.Padding(4);
-            this.start.Name = "start";
-            this.start.Size = new System.Drawing.Size(117, 60);
-            this.start.TabIndex = 9;
-            this.start.Text = "Open";
-            this.start.UseVisualStyleBackColor = true;
-            this.start.Click += new System.EventHandler(this.start_Click);
+            this.buttonOpen.Location = new System.Drawing.Point(7, 636);
+            this.buttonOpen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonOpen.Name = "buttonOpen";
+            this.buttonOpen.Size = new System.Drawing.Size(112, 45);
+            this.buttonOpen.TabIndex = 9;
+            this.buttonOpen.Text = "Open";
+            this.buttonOpen.UseVisualStyleBackColor = true;
+            this.buttonOpen.Click += new System.EventHandler(this.buttonOpen_Click);
             // 
-            // dataBits
+            // comboBoxDataBits
             // 
-            this.dataBits.FormattingEnabled = true;
-            this.dataBits.Items.AddRange(new object[] {
+            this.comboBoxDataBits.FormattingEnabled = true;
+            this.comboBoxDataBits.Items.AddRange(new object[] {
             "5",
             "6",
             "7",
             "8"});
-            this.dataBits.Location = new System.Drawing.Point(136, 156);
-            this.dataBits.Name = "dataBits";
-            this.dataBits.Size = new System.Drawing.Size(124, 26);
-            this.dataBits.TabIndex = 10;
+            this.comboBoxDataBits.Location = new System.Drawing.Point(140, 131);
+            this.comboBoxDataBits.Name = "comboBoxDataBits";
+            this.comboBoxDataBits.Size = new System.Drawing.Size(124, 26);
+            this.comboBoxDataBits.TabIndex = 10;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(13, 159);
+            this.label5.Location = new System.Drawing.Point(35, 136);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 18);
@@ -232,188 +221,223 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.repeatTime_textBox);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.repeat_checkBox);
-            this.panel1.Controls.Add(this.match_num);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.mismatch_num);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.cleanText);
-            this.panel1.Controls.Add(this.baudRate);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.richTextBoxReceive);
+            this.panel1.Controls.Add(this.labelMismatchNum);
+            this.panel1.Controls.Add(this.labelMismatch);
+            this.panel1.Controls.Add(this.labelMatchNum);
+            this.panel1.Controls.Add(this.labelMatch);
+            this.panel1.Controls.Add(this.label_ms);
+            this.panel1.Controls.Add(this.textBoxTimer);
+            this.panel1.Controls.Add(this.checkBoxRepeat);
+            this.panel1.Controls.Add(this.checkBox_newline);
+            this.panel1.Controls.Add(this.buttonClean);
+            this.panel1.Controls.Add(this.comboBoxBaudRate);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.start);
-            this.panel1.Controls.Add(this.serialPorts);
+            this.panel1.Controls.Add(this.buttonOpen);
+            this.panel1.Controls.Add(this.comboBoxSerialPorts);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dataBits);
+            this.panel1.Controls.Add(this.comboBoxDataBits);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.parity);
-            this.panel1.Controls.Add(this.stop);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.comboBoxParity);
+            this.panel1.Controls.Add(this.comboBoxStop);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(276, 645);
+            this.panel1.Size = new System.Drawing.Size(998, 698);
             this.panel1.TabIndex = 12;
             // 
-            // repeatTime_textBox
+            // label_ms
             // 
-            this.repeatTime_textBox.Location = new System.Drawing.Point(136, 353);
-            this.repeatTime_textBox.Name = "repeatTime_textBox";
-            this.repeatTime_textBox.Size = new System.Drawing.Size(100, 28);
-            this.repeatTime_textBox.TabIndex = 22;
+            this.label_ms.AutoSize = true;
+            this.label_ms.Location = new System.Drawing.Point(236, 559);
+            this.label_ms.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_ms.Name = "label_ms";
+            this.label_ms.Size = new System.Drawing.Size(26, 18);
+            this.label_ms.TabIndex = 17;
+            this.label_ms.Text = "ms";
             // 
-            // label9
+            // textBoxTimer
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(242, 360);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(26, 18);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "ms";
+            this.textBoxTimer.Location = new System.Drawing.Point(136, 552);
+            this.textBoxTimer.Name = "textBoxTimer";
+            this.textBoxTimer.Size = new System.Drawing.Size(74, 28);
+            this.textBoxTimer.TabIndex = 16;
             // 
-            // repeat_checkBox
+            // checkBoxRepeat
             // 
-            this.repeat_checkBox.AutoSize = true;
-            this.repeat_checkBox.Location = new System.Drawing.Point(16, 360);
-            this.repeat_checkBox.Name = "repeat_checkBox";
-            this.repeat_checkBox.Size = new System.Drawing.Size(88, 22);
-            this.repeat_checkBox.TabIndex = 20;
-            this.repeat_checkBox.Text = "repeat";
-            this.repeat_checkBox.UseVisualStyleBackColor = true;
+            this.checkBoxRepeat.AutoSize = true;
+            this.checkBoxRepeat.Location = new System.Drawing.Point(16, 559);
+            this.checkBoxRepeat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxRepeat.Name = "checkBoxRepeat";
+            this.checkBoxRepeat.Size = new System.Drawing.Size(88, 22);
+            this.checkBoxRepeat.TabIndex = 15;
+            this.checkBoxRepeat.Text = "repeat";
+            this.checkBoxRepeat.UseVisualStyleBackColor = true;
+            this.checkBoxRepeat.CheckedChanged += new System.EventHandler(this.checkBoxRepeat_CheckedChanged);
             // 
-            // match_num
+            // checkBox_newline
             // 
-            this.match_num.AutoSize = true;
-            this.match_num.ForeColor = System.Drawing.Color.Red;
-            this.match_num.Location = new System.Drawing.Point(170, 453);
-            this.match_num.Name = "match_num";
-            this.match_num.Size = new System.Drawing.Size(17, 18);
-            this.match_num.TabIndex = 17;
-            this.match_num.Text = "0";
+            this.checkBox_newline.AutoSize = true;
+            this.checkBox_newline.Location = new System.Drawing.Point(16, 520);
+            this.checkBox_newline.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox_newline.Name = "checkBox_newline";
+            this.checkBox_newline.Size = new System.Drawing.Size(97, 22);
+            this.checkBox_newline.TabIndex = 14;
+            this.checkBox_newline.Text = "newline";
+            this.checkBox_newline.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // buttonClean
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(26, 453);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 18);
-            this.label8.TabIndex = 16;
-            this.label8.Text = "match：";
+            this.buttonClean.Location = new System.Drawing.Point(150, 637);
+            this.buttonClean.Name = "buttonClean";
+            this.buttonClean.Size = new System.Drawing.Size(112, 45);
+            this.buttonClean.TabIndex = 13;
+            this.buttonClean.Text = "Clean";
+            this.buttonClean.UseVisualStyleBackColor = true;
+            this.buttonClean.Click += new System.EventHandler(this.cleanText_Click);
             // 
-            // mismatch_num
+            // TextBoxSend
             // 
-            this.mismatch_num.AutoSize = true;
-            this.mismatch_num.ForeColor = System.Drawing.Color.Red;
-            this.mismatch_num.Location = new System.Drawing.Point(170, 490);
-            this.mismatch_num.Name = "mismatch_num";
-            this.mismatch_num.Size = new System.Drawing.Size(17, 18);
-            this.mismatch_num.TabIndex = 15;
-            this.mismatch_num.Text = "0";
+            this.TextBoxSend.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxSend.Location = new System.Drawing.Point(121, 85);
+            this.TextBoxSend.Name = "TextBoxSend";
+            this.TextBoxSend.Size = new System.Drawing.Size(592, 28);
+            this.TextBoxSend.TabIndex = 12;
             // 
-            // label6
+            // richTextBoxReceive
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 490);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 18);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "mismatch：";
-            // 
-            // cleanText
-            // 
-            this.cleanText.Location = new System.Drawing.Point(164, 580);
-            this.cleanText.Name = "cleanText";
-            this.cleanText.Size = new System.Drawing.Size(104, 62);
-            this.cleanText.TabIndex = 13;
-            this.cleanText.Text = "Clean";
-            this.cleanText.UseVisualStyleBackColor = true;
-            this.cleanText.Click += new System.EventHandler(this.cleanText_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(19, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(125, 18);
-            this.label7.TabIndex = 19;
-            this.label7.Text = "MatchString：";
-            // 
-            // regexbox
-            // 
-            this.regexbox.Location = new System.Drawing.Point(187, 27);
-            this.regexbox.Name = "regexbox";
-            this.regexbox.Size = new System.Drawing.Size(443, 28);
-            this.regexbox.TabIndex = 18;
-            // 
-            // sendText
-            // 
-            this.sendText.Location = new System.Drawing.Point(187, 91);
-            this.sendText.Name = "sendText";
-            this.sendText.Size = new System.Drawing.Size(443, 28);
-            this.sendText.TabIndex = 12;
+            this.richTextBoxReceive.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBoxReceive.Location = new System.Drawing.Point(273, 9);
+            this.richTextBoxReceive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBoxReceive.Name = "richTextBoxReceive";
+            this.richTextBoxReceive.Size = new System.Drawing.Size(712, 552);
+            this.richTextBoxReceive.TabIndex = 13;
+            this.richTextBoxReceive.Text = "";
+            this.richTextBoxReceive.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.richTextBoxReceive_KeyPress);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.regexbox);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.send);
-            this.panel2.Controls.Add(this.sendText);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(276, 511);
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.TextBoxMatchString);
+            this.panel2.Controls.Add(this.labelMatchString);
+            this.panel2.Controls.Add(this.buttonSend);
+            this.panel2.Controls.Add(this.TextBoxSend);
+            this.panel2.Location = new System.Drawing.Point(282, 569);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(684, 134);
-            this.panel2.TabIndex = 20;
+            this.panel2.Size = new System.Drawing.Size(716, 125);
+            this.panel2.TabIndex = 14;
+            // 
+            // labelMatch
+            // 
+            this.labelMatch.AutoSize = true;
+            this.labelMatch.Location = new System.Drawing.Point(13, 447);
+            this.labelMatch.Name = "labelMatch";
+            this.labelMatch.Size = new System.Drawing.Size(53, 18);
+            this.labelMatch.TabIndex = 18;
+            this.labelMatch.Text = "Match";
+            // 
+            // labelMatchNum
+            // 
+            this.labelMatchNum.AutoSize = true;
+            this.labelMatchNum.Location = new System.Drawing.Point(126, 447);
+            this.labelMatchNum.Name = "labelMatchNum";
+            this.labelMatchNum.Size = new System.Drawing.Size(17, 18);
+            this.labelMatchNum.TabIndex = 19;
+            this.labelMatchNum.Text = "0";
+            // 
+            // labelMismatch
+            // 
+            this.labelMismatch.AutoSize = true;
+            this.labelMismatch.Location = new System.Drawing.Point(13, 483);
+            this.labelMismatch.Name = "labelMismatch";
+            this.labelMismatch.Size = new System.Drawing.Size(80, 18);
+            this.labelMismatch.TabIndex = 20;
+            this.labelMismatch.Text = "Mismatch";
+            // 
+            // labelMismatchNum
+            // 
+            this.labelMismatchNum.AutoSize = true;
+            this.labelMismatchNum.Location = new System.Drawing.Point(126, 483);
+            this.labelMismatchNum.Name = "labelMismatchNum";
+            this.labelMismatchNum.Size = new System.Drawing.Size(17, 18);
+            this.labelMismatchNum.TabIndex = 21;
+            this.labelMismatchNum.Text = "0";
+            // 
+            // labelMatchString
+            // 
+            this.labelMatchString.AutoSize = true;
+            this.labelMatchString.Location = new System.Drawing.Point(9, 29);
+            this.labelMatchString.Name = "labelMatchString";
+            this.labelMatchString.Size = new System.Drawing.Size(107, 18);
+            this.labelMatchString.TabIndex = 22;
+            this.labelMatchString.Text = "matchString";
+            // 
+            // TextBoxMatchString
+            // 
+            this.TextBoxMatchString.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextBoxMatchString.Location = new System.Drawing.Point(121, 26);
+            this.TextBoxMatchString.Name = "TextBoxMatchString";
+            this.TextBoxMatchString.Size = new System.Drawing.Size(592, 28);
+            this.TextBoxMatchString.TabIndex = 23;
             // 
             // SerialPortW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(960, 645);
-            this.Controls.Add(this.panel2);
+            this.ClientSize = new System.Drawing.Size(998, 702);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.receive);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SerialPortW";
-            this.Text = "SerialPortW";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "SerialPort";
+            this.Load += new System.EventHandler(this.SerialPortW_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox serialPorts;
-        private System.Windows.Forms.Button send;
-        private System.Windows.Forms.TextBox receive;
+        private System.Windows.Forms.ComboBox comboBoxSerialPorts;
+        private System.Windows.Forms.Button buttonSend;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox baudRate;
+        private System.Windows.Forms.ComboBox comboBoxBaudRate;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox parity;
+        private System.Windows.Forms.ComboBox comboBoxParity;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox stop;
-        private System.Windows.Forms.Button start;
-        private System.Windows.Forms.ComboBox dataBits;
+        private System.Windows.Forms.ComboBox comboBoxStop;
+        private System.Windows.Forms.Button buttonOpen;
+        private System.Windows.Forms.ComboBox comboBoxDataBits;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox sendText;
-        private System.Windows.Forms.Button cleanText;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label match_num;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label mismatch_num;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox regexbox;
-        private System.Windows.Forms.TextBox repeatTime_textBox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.CheckBox repeat_checkBox;
+        private System.Windows.Forms.TextBox TextBoxSend;
+        private System.Windows.Forms.Button buttonClean;
+        private System.Windows.Forms.RichTextBox richTextBoxReceive;
+        private System.Windows.Forms.CheckBox checkBox_newline;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label_ms;
+        private System.Windows.Forms.TextBox textBoxTimer;
+        private System.Windows.Forms.CheckBox checkBoxRepeat;
+        private System.Windows.Forms.Label labelMismatchNum;
+        private System.Windows.Forms.Label labelMismatch;
+        private System.Windows.Forms.Label labelMatchNum;
+        private System.Windows.Forms.Label labelMatch;
+        private System.Windows.Forms.TextBox TextBoxMatchString;
+        private System.Windows.Forms.Label labelMatchString;
     }
 }
 

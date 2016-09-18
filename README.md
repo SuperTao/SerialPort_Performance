@@ -8,4 +8,8 @@
 
 显示效果如下：
 
-![](./image/serialport.png)
+## V1.1
+
+解决接时UI卡顿的问题。
+
+![](./image/V1_1.png)
